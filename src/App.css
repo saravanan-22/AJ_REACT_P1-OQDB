@@ -1,0 +1,89 @@
+.App {
+  /* text-align: center; */
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#Nav-color {
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.3em;
+}
+
+#Nav-color:hover {
+  background-color: white;
+  color: black;
+}
+
+.custom-dropdown .dropdown-toggle::after {
+  border-top-color: rgb(255, 255, 255) !important;
+}
+
+/* Custom CSS for reducing the NavDropdown width */
+.custom-dropdown .dropdown-menu {
+  left: auto; /* Reset the left property */
+  right: 0; /* Adjust the value as per your desired width */
+}
+
+.custom-dropdown:hover .dropdown-toggle::after,
+.custom-dropdown:active .dropdown-toggle::after {
+  border-top-color: rgb(
+    139,
+    216,
+    188
+  ); /* Add your desired color for the arrow */
+}
+
+.custom-dropdown:hover .dropdown-menu,
+.custom-dropdown:active .dropdown-menu {
+  background-color: rgb(139, 216, 188); /* Add your desired background color */
+  color: black; /* Add your desired text color */
+}
+
+.custom-dropdown {
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.3em;
+}
+.home-logo {
+  width: clamp(200px, 50vw, 350px);
+}
