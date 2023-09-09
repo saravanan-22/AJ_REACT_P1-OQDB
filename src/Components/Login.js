@@ -143,7 +143,7 @@ function Login() {
           </Card.Body>
           <span className="text-light">
             {" "}
-            user usercredential! /{" "}
+            user usercredential!.. / {" "}
             <Button size="sm" onClick={setDefaultValue}>
               login
             </Button>
