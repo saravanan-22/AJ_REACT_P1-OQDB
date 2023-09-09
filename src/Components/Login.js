@@ -59,6 +59,12 @@ function Login() {
     }
   };
 
+  const setDefaultValue = (e) => {
+    e.preventDefault();
+    setUserEmail("saravanan@gmail.com")
+    setUserPassword("123456")
+  };
+
   return (
     <div>
       <section
@@ -79,6 +85,7 @@ function Login() {
                   <Form.Control
                     required
                     type="email"
+                    value={userEmail}
                     placeholder="Enter email"
                     onChange={(e) => setUserEmail(e.target.value)}
                   />
@@ -89,6 +96,7 @@ function Login() {
                     required
                     type="password"
                     placeholder="Password"
+                    value={userPassword}
                     onChange={(e) => setUserPassword(e.target.value)}
                   />
                 </Form.Group>
@@ -133,6 +141,13 @@ function Login() {
               </span>
             </Link>
           </Card.Body>
+          <span className="text-light">
+            {" "}
+            user usercredential! /{" "}
+            <Button size="sm" onClick={setDefaultValue}>
+              login
+            </Button>
+          </span>
         </Card>
       </section>
     </div>
