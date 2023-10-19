@@ -304,7 +304,10 @@ const Browse = () => {
                         <FaArrowDown />
                       )}
                     </div>
+        
                   </th>
+                  <th>Date</th>
+
                 </tr>
               </thead>
               <tbody>
@@ -315,6 +318,7 @@ const Browse = () => {
                     <td>{user.SelectedType}</td>
                     <td>{user.SelectedDifficulty}</td>
                     <td>{user.Question}</td>
+                    <td>{user.Date}</td>
                   </tr>
                 ))}
               </tbody>

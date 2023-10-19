@@ -10,6 +10,21 @@ import { useNavigate } from "react-router-dom";
 
 const apiUrl = "https://opentdb.com/api_category.php";
 
+
+const currentDate = new Date();
+
+      const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+      };
+      const loginDateWithDay = currentDate.toLocaleString("en-US", options);
+
+
 const initialFormState = {
   SelectedCategory: "",
   SelectedType: "Multiple Choice",
@@ -20,6 +35,7 @@ const initialFormState = {
   IncorrectAnswer2: "",
   IncorrectAnswer3: "",
   Reference: "",
+  Date: loginDateWithDay,
 };
 
 const AddQuestion = (props) => {
@@ -67,6 +83,7 @@ const AddQuestion = (props) => {
               IncorrectAnswer2: selectedQuestion.IncorrectAnswer2,
               IncorrectAnswer3: selectedQuestion.IncorrectAnswer3,
               Reference: selectedQuestion.Reference,
+              Date : loginDateWithDay,
             });
           }
         } catch (error) {

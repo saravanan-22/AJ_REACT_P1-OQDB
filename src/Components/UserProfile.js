@@ -20,6 +20,13 @@ const UserProfile = () => {
   const [filterOption, setFilterOption] = useState("Category");
   const [unverifiedQuestionsCount, setUnverifiedQuestionsCount] = useState(0);
 
+  const handleDeleteRow = (id) => {
+    const updatedData = filteredUserInput.filter(
+      (user) => user.SelectedID !== id
+    );
+    setFilteredUserInput(updatedData);
+  };
+
   const renderArrowIcon = (field) => {
     if (sortField === field) {
       return sortOrder === "asc" ? (
@@ -129,7 +136,8 @@ const UserProfile = () => {
       return fieldA > fieldB ? -1 : 1;
     }
   });
-  console.log(sortedUserInput);
+  // console.log(sortedUserInput);
+
   return (
     <div
       style={{ backgroundColor: "black", height: "90vh", overflowY: "auto" }}
@@ -184,6 +192,7 @@ const UserProfile = () => {
             </tr>
           </tbody>
         </Table>
+
         <section>
           <h4 style={{ color: "white" }}>Verified Questions</h4>
           <div
@@ -258,6 +267,18 @@ const UserProfile = () => {
                       <td>{user.SelectedType}</td>
                       <td>{user.SelectedDifficulty}</td>
                       <td>{user.Question}</td>
+                      <td>
+                        <Button
+                          size="sm"
+                          style={{
+                            background: "rgb(231, 76, 60)",
+                            border: "none",
+                          }}
+                          onClick={() => handleDeleteRow(user.SelectedID)}
+                        >
+                          Delete
+                        </Button>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
